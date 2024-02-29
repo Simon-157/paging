@@ -24,17 +24,7 @@ void writeOutFrameToStore(int phy_frame, int page) {
         }
     }
 }
-// void writeOutFrameToStore(int phy_frame, int store_frame) {
-//     FILE *backing_store;
-//     backing_store = fopen("Address_store.bin", "rw+");
-//     if (backing_store == NULL) {
-//         printf("Failed to open backing_store.bin for writing\n");
-//         return;
-//     }
-//     fseek(backing_store, store_frame * PAGE_SIZE, SEEK_SET);
-//     fwrite(&physical_memory[phy_frame * PAGE_SIZE], 1, PAGE_SIZE, backing_store);
-//     fclose(backing_store);
-// }
+
 
 void readInFrameFromStore(int phy_frame, int store_frame) {
     FILE *backing_store;
