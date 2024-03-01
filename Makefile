@@ -1,6 +1,5 @@
-
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c11
+CFLAGS = -Wall -Wextra -std=c11 -mcmodel=large 
 INCLUDES = -Isrc/include
 
 SRC_DIR = src/lib

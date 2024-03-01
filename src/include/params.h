@@ -1,10 +1,14 @@
 #ifndef MEMORY_PARAMETERS_H
 #define MEMORY_PARAMETERS_H
 
-#define PAGE_SIZE            256
-#define PAGE_TABLE_SIZE      256
-#define PHYS_MEM_SIZE        256
-#define TLB_SIZE             16
+#define PAGE_SIZE            4096    // 4KB page size
+#define FRAME_SIZE           4096    // 4KB frame size
+#define PAGE_TABLE_SIZE      (PHYS_MEM_SIZE / PAGE_SIZE)    // Number of pages allowed in the page table
+
+
+#define PHYS_MEM_SIZE        1048576    // 1MB physical memory size
+
+#define TLB_SIZE             32      // 32-entry TLB
 
 #define VIRTUAL_PAGE_MASK    0x0000FF00
 #define VIRTUAL_OFFSET_MASK  0x000000FF
